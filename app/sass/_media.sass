@@ -1,0 +1,506 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+@media (max-width: 1233px)
+    .container__footer .default__p
+        position: relative
+        left: -26em
+        top: -19.7em
+    .container__footer .row-no-padding
+        margin-top: 50px    
+// ≥1200px
++media-breakpoint-down(lg)
+    .cards__item
+        width: 188px
+        height: 111px
+        padding-top: 20px
+        padding-left: 10px
+    .row__mail-tel , .nav
+        margin-right: 20px  
+    .row__cards
+        width: 100%   
+    .slider-prev
+	    top: 400px
+	    right: 420px
+	    z-index: 3
+    .slider-next
+	    top: 400px
+	    right: 390px  
+    .digits
+	    position: absolute
+	    right: 0
+	    font-family: playfair-d, sans-serif
+	    font-size: 60px
+	    color: #c19a64
+	    span
+		    position: absolute
+		    &:first-child
+			    position: absolute !important
+			    top: 5px !important
+			    right: 40px
+		    &:nth-child(2)
+			    top: 27px
+			    right: 20px	
+			    transform: rotate(15deg)
+		    &:last-child
+			    top: 33px
+			    right: 0px
+@media (max-width: 1055px)
+    .row__reviews
+        width: 100% !important
+    .rev__prev
+	    top: 226px
+	    right: 60px
+    .rev__next
+	    top: 226px
+	    right: 30px                    	
+@media (max-width: 1015px)
+    .container__team
+        max-width: 100%
+    .row__team , .row__articles
+        width: 100% !important
+    .row__articles
+        .col
+            p
+                line-height: 1.2    
+                             
+// ≥992px
++media-breakpoint-down(md)
+    .cards__item
+        &:nth-child(4)
+            border-right: 1px solid black
+        &:last-child
+            border-top: none
+    .row__safety-text , .safety__text
+        width: 100%        
+    .container-safety
+        margin-top: 5px
+    .row__about
+        padding-top: 180px   
+    .content 
+        .content__left
+            img
+                width: 100%  
+    .digits
+	    position: relative
+	    left: 300px
+        top: -100px
+	    color: #c19a64
+        z-index: 90
+	    span
+		    position: absolute
+		    &:first-child
+			    position: absolute !important
+			    top: -205px !important
+			    left: 31px
+		    &:nth-child(2)
+			    top: -150px
+			    left: 56px	
+			    transform: rotate(15deg)
+		    &:last-child
+			    top: -153px
+			    left: 80px	 
+    .container__reviews
+        max-width: 840px
+    .rev__prev
+	    top: 246px
+	    right: 60px
+    .rev__next
+	    top: 246px
+	    right: 30px         
+    .form
+       width: 348px !important
+       padding: 40px !important
+    .container__footer
+        height: auto        
+@media (max-width: 956px)  
+    .container__footer .footer__top
+        width: 100%
+                   
+@media (max-width: 870px)
+    .row__team
+        justify-content: space-between
+        .team__item
+            &:last-child
+                margin: 0 auto                     
+@media (max-width: 798px)
+    .cards__item
+        &:nth-child(3)
+            border-right: 1px solid black
+        &:nth-child(4) , &:last-child
+            border-top: none
+            
+        &:nth-child(5)
+            border-left: none 
+    .safety__text
+        justify-content: space-around !important   
+    .rev__prev
+	    top: 266px
+	    right: 60px
+    .rev__next
+	    top: 266px
+	    right: 30px                                  
+// ≥768px
++media-breakpoint-down(sm)
+    .row__title
+        padding-top: 70px
+    .nav__ul
+        position: fixed
+        //right: 0%
+        top: 50%
+        transition: .5s
+        transform-origin: center right
+        transform: scaleX(1) translateX(100%)
+        opacity: 0
+        padding-left: 0%
+        display: flex
+        flex-direction: column
+        background: rgba(255,255,255, .8)
+        width: 100vw
+        height: 100vh
+        justify-content: center
+        align-items: center
+        text-align: center
+    .nav__a
+        background: transparent
+        width: 0vw
+        color: black !important
+        z-index: 4000
+        border: none
+        text-shadow: 0 0 0
+        margin: 0.5em
+        text-align: center
+        &:hover
+            background: transparent
+
+    .nav__ul_active
+        transition: .3s
+        position: fixed
+        
+        left: 0
+        top: 0
+        transform: scaleX(1) translateX(0%)
+        display: flex
+        flex-direction: column
+        z-index: 10
+        opacity: 1
+    .menu-btn
+        position: fixed
+        top: 3em
+        right: 3em  
+        z-index: 9000     
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        background: white
+        border-radius: 50%
+        width: 2.5em
+        height: 2.5em 
+        span
+            transition: .5s
+            position: relative
+            background: black
+            display: block
+            height: 2px
+            width: 1em
+            margin: 2px
+    .menu-btn_animate
+        span:first-child
+            transform: rotate(45deg)
+            width: 1.55em 
+            top: 4px
+        span:nth-child(2)
+            display: none
+        span:last-child
+            top: -2px
+            transform: rotate(-45deg) 
+            width: 1.55em   
+    .nav__li , .nav__a
+        width: 100%      
+    .safety__text
+        display: flex !important
+        flex-direction: column !important
+        .safety__right
+            padding-top: 30px
+            margin-bottom: 30px
+    .row__safety-text
+        .col
+            height: auto   
+    .nav
+        right: 0px      
+    .row__about
+        padding-top: 290px 
+    .content
+        flex-direction: column !important
+        .content__right , .content__left
+            width: 80%
+    .slider-prev
+	    top: 424px
+	    right: 480px
+	    z-index: 3
+    .slider-next
+	    top: 424px
+	    right: 450px            
+    .digits
+	    position: relative
+	    left: 300px
+        top: -150px
+	    color: #c19a64
+        z-index: 90
+	    span
+		    position: absolute
+		    &:first-child
+			    position: absolute !important
+			    top: -135px !important
+			    left: 111px
+		    &:nth-child(2)
+			    top: -65px
+			    left: 116px	
+			    transform: rotate(19deg)
+		    &:last-child
+			    top: -83px
+			    left: 130px	
+    .row__articles
+        flex-direction: column
+        height: 700px
+        .col
+            height: 270px
+            margin-bottom: 40px !important
+            &:before
+                width: 99% !important  
+    .row__reviews
+        display: flex
+        flex-direction: column !important
+        .col
+            img
+                position: relative   
+    .my-class2
+        width: 90%    
+    .rev__prev
+	    top: 106px
+	    left: -15px
+    .rev__next
+	    top: 106px
+	    right: -15px  
+        z-index: 9000000000    
+    .container__footer .footer__top
+        flex-direction: column
+        padding-top: 10px
+        .col-5
+            margin-bottom: 30px
+            a , p
+                white-space: nowrap
+                
+    .container__footer .row-no-padding
+        margin-top: 0  
+    .container__footer .footer__top .col-5
+        padding-left: 15px                         
+@media (max-width: 700px)
+    .row__team
+        .team__item
+            &:last-child
+                margin: 0                  
+@media (max-width: 627px)
+    .row__safety-text
+        flex-direction: column       
+        height: 860px
+    .container__footer .row-no-padding
+        flex-direction: column
+        img
+            width: 200px
+            margin: 0 auto
+        p
+            left: 0
+            margin: 0 auto
+    .container__footer .row-no-padding .row__icons
+        left: 0
+        margin: 0 auto            
+@media (max-width: 610px)
+    .cards__item
+        &:nth-child(2)
+            border-right: 1px solid black
+        &:nth-child(3)
+            border-top: none
+            border-right: none    
+        &:nth-child(4) , &:last-child
+            border-top: none
+            
+        &:nth-child(5)
+            border-left: 1px solid black
+    .row__title
+        padding-top: 50px 
+    .h1
+        font-size: 45px
+    .h3
+        font-size: 22px  
+    .safety__h1
+        padding-top: 60px
+        font-size: 35px
+        line-height: 1.2                                  
+// ≥576px
++media-breakpoint-down(xs)
+    .container-safety
+        margin-top: 520px
+    .content__left , .content__right
+        width: 100% !important
+    .digits
+        display: none 
+    .slider-prev
+	    top: 551px
+	    left: 10px
+	    z-index: 3
+        
+    .slider-next
+	    top: 551px
+	    right: 10px      
+    .row__team
+        flex-direction: column
+        .team__item
+            width: 100%   
+            text-align: center
+    .rev__prev
+	    top: 126px
+	    left: -15px !important
+    .rev__next
+	    top: 126px
+	    right: -30px !important 
+    .row__reviews
+        .col-sm-11
+            padding-left: 0
+            img
+                width: 100%       
+        .col-sm-12
+            padding-left: 30px  
+        .row__cards
+            position: relative !important
+            
+        .container__blocks
+            padding-left: -10px !important   
+            width: 96%    
+@media (max-width: 510px)
+    .row__mail-tel
+        margin-left: 20px
+        a
+            white-space: nowrap
+    .row__about
+        padding-top: 500px
+        width: 100%
+    .row__articles
+        flex-direction: column
+        height: 700px
+        .col
+            height: 270px
+            margin-bottom: 40px !important
+            &:before
+                width: 98.5% !important    
+    .container__articles
+        .default__p
+            padding-top: 40px   
+            padding-bottom: 40px            
+@media (max-width: 440px)
+    .row__safety-text
+        height: 960px  
+    .container__footer .footer__top .col-auto .form
+        width: 100% !important
+        padding: 20px !important
+        height: 100%
+        .h1
+            white-space: nowrap
+
+@media (max-width: 424px)
+    .container-safety
+        margin-top: 0px 
+    .cards__item
+        border-right: 1px solid black
+        width: 214px
+        &:nth-child(2)
+            border-right: 1px solid black
+            border-top: none
+        &:nth-child(3)
+            border-top: none
+            border-right: 1px solid black   
+        &:nth-child(4) , &:last-child
+            border-top: none
+            
+        &:nth-child(5)
+            border-left: 1px solid black
+                            
+@media (max-width: 410px)
+    .row__mail-tel
+        a
+            white-space: nowrap
+    .h1
+        font-size: 34px
+    .cards__item
+        border-right: 1px solid black
+        width: 214px
+        &:nth-child(2)
+            border-right: 1px solid black
+            border-top: none
+        &:nth-child(3)
+            border-top: none
+            border-right: 1px solid black   
+        &:nth-child(4) , &:last-child
+            border-top: none
+            
+        &:nth-child(5)
+            border-left: 1px solid black   
+@media (max-width: 370px)
+    .container-safety
+        margin-top: 0px  
+    
+        .col
+            padding: 20px      
+    .safety__text
+        height: 580px      
+    .slider-prev
+	    top: 441px
+	    left: 0px
+	    z-index: 3
+        
+    .slider-next
+	    top: 441px
+	    right: 10px
+    .container__slider
+        height: 842px
+    .content__left, .content__right
+        height: 370px    
+    .rev__prev
+	    top: 126px
+	    left: -15px !important
+    .rev__next
+	    top: 126px
+	    right: -30px      
+              
+@media (max-width: 350px)
+    .row__title
+        padding-top: 20px 
+    .row__cards
+        position: relative !important
+        margin-left: -15px
+        margin-right: -15px
+        padding: 0 !important 
+        max-width: 100% !important
+        width: 100%
+    .row__about
+        margin-left: -15px   
+        margin-right: -15px  !important          
+    .container-safety
+        padding-left: 0
+    .safety__h1
+        padding-top: 30px        
+    .row__articles
+        flex-direction: column
+        height: 700px
+        .col
+            height: 270px
+            margin-bottom: 40px !important
+            &:before
+                width: 98% !important      
+    .container__blocks
+        max-width: 100% !important
+        width: 99%
+        padding: 0    
+        

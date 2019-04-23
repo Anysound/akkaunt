@@ -1,0 +1,656 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+/*custom styles*/
+.container-wide
+	max-width: 1300px
+	position: relative	
+	z-index: 0
+	margin: 0 auto
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: -30px
+		background: #212121
+		opacity: .9
+		z-index: -1
+		height: 700px
+		width: 68%
+	.justify-content-between
+		z-index: 999
+		padding: 10px 0
+		padding-bottom: 0
+		border-bottom: 1px solid rgba(255, 255, 255, .1)
+		
+		.row__mail-tel
+			z-index: 999
+			padding-bottom: 10px
+			a
+				font-family: pt-sans , sans-serif
+				color: rgba(193, 154, 100, 255)
+				&:first-child
+					margin-right: 51px
+		.row__icons
+			margin-left: 20px
+			i
+				color: #444444
+				font-size: 19px
+				margin-right: 24px
+				z-index: 999
+		img
+			margin-left: 20px		
+.nav
+	position: relative
+	top: -1px
+	right: -344px
+.nav__ul
+	display: table
+	width: 100%
+	right: 0
+	margin-bottom: 0
+	.nav__li
+		display: table-cell
+		height: 45px
+		margin-top: 0
+		.nav__a
+			position: relative
+			display: inline-block
+			color: white
+			font-family: proxima-nova , sans-serif
+			margin-right: 20px
+			padding-top: 17px
+			line-height: 10px
+			border-top: 1px solid transparent
+			//box-shadow: inset 0 0 5px 2px rgba(193, 154, 100, 255)
+			
+			&:hover
+				text-decoration: none
+				border-top: 1px solid rgba(193, 154, 100, 255)
+				color: #eedbc5
+				border-left: none !important
+				&:before
+					display: block
+			&:before
+				content: ''
+				height: 0px
+				width: 100%
+				position: absolute
+				top: 0
+				display: none
+				box-shadow: 0 0 4px 1px rgba(193, 154, 100, 255)	
+
+		.nav__a_four
+			margin-right: 0
+	
+.header
+	position: relative
+	background: url(../img/bg.png)	no-repeat 100% 100%	
+	height: 700px
+.row-no-padding
+	padding-top: 0 !important
+	border-bottom: none !important
+	img
+		padding-top: 10px
+		z-index: 9
+.row__title
+	display: block
+	padding-top: 150px
+	color: white
+	margin-left: 40px
+	max-width: 920px
+	margin: auto
+	position: relative
+	&:before
+			position: absolute
+			content: ''
+			display: block
+			height: 0.9px
+			width: 20%
+			left: -180px
+			top: 255px
+			
+			background: #c19a64
+			transform: rotate(90deg)
+	.title__wrapper
+		position: relative
+.submit__wrapper
+	display: table		
+.submit
+	background: #c19a64
+	height: 43px
+	width: 221px
+	display: table-cell
+	text-align: center
+	vertical-align: middle
+	color: black
+	letter-spacing: 1.2px
+	font-family: proxima-nova , sans-serif
+	text-transform: uppercase
+.submit-arrow
+	display: table-cell	
+	border: 1px solid #c19a64
+	width: 43px
+	height: 43px
+	text-align: center
+	vertical-align: middle
+	color: 	#c19a64
+	
+.h1
+	font-family: playfair-d , sans-serif	
+	font-size: 50px
+	line-height: 1.3
+	font-weight: 400
+	margin-top: 0
+	padding-top: 0
+.h3
+	font-family: proxima-nova, sans-serif
+	font-size: 24px
+	color: #c19a64
+	line-height: 1.2	
+	margin-top: 16px
+	margin-bottom: 40px
+.container__blocks
+	position: relative	
+	height: auto
+
+.row__cards
+	//margin: 0 auto
+	padding-top: 0px
+	width: 1125px
+	position: absolute
+	top: -70px
+.cards__item
+	width: 225px
+	height: 131px
+	display: table
+	border: 1px solid black
+	border-right: none	
+	background: white
+	padding-top: 27px
+	padding-left: 14px
+	.cards__top
+		display: table-row
+	.cards__bottom
+		display: table-row
+		position: relative
+		p
+			display: table-cell	
+			font-family: playfair-d, sans-serif
+			font-size: 18px
+			color: black
+			font-weight: 400
+			i
+				display: inline
+				margin-left: 15px
+				font-size: 14px
+				font-weight: 600
+	&:last-child
+		border-right: 1px solid black			
+.row__about
+	position: relative
+	width: 470px
+	color: #888888
+	font-family: "Playfair Display"
+	font-size: 18px
+	font-weight: 400
+	line-height: 24px
+	text-align: center
+	margin: 0px auto 0
+	padding-top: 88px
+	padding-bottom: 40px
+/*container__safety*/
+.container-safety
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	margin: 0px auto
+	margin-bottom: 0
+	max-width: 100%	
+	background: #212121
+	
+.safety__text
+	width: 910px
+	
+.safety__h1
+	color: white	
+	font-size: 40px
+	padding-top: 100px
+.default__p
+	margin-top: 20px
+	color: #ababab
+	font-family: "Proxima Nova"
+	font-size: 18px
+	font-weight: 400
+	line-height: 24px
+.safety__right
+	padding-top: 130px
+	padding-right: 0
+	.right__top , .right__bottom
+		display: flex
+		
+		width: 255px !important
+		span
+			font-family: 'playfair-d', sans-serif
+			color: #c19a64
+			font-size: 80px
+			
+			line-height: 24px
+		.fz60
+			font-size: 60px
+		p
+			color: #ffffff
+			font-family: 'playfair-d', sans-serif
+			font-size: 14px
+			margin-left: 25px
+			margin-top: 20px
+			line-height: 24px	
+			&:last-child
+				margin-top: 7px
+	.right__top
+		border-bottom: 1px solid rgba(255, 255, 255, .22)	
+		padding-bottom: 15px	
+	.right__bottom
+		padding-top: 25px	
+.row__safety-text
+	width: 930px
+	.col
+		height: 190px
+		border: 1px solid rgba(193, 154, 100, .35)
+		margin-right: 31px
+		margin-bottom: 31px
+		padding-left: 40px
+		padding-top: 30px
+		padding-right: 33px
+		width: 447px !important
+		.h2
+			color: #c19a64 !important
+			margin-bottom: 10px
+			font-size: 16px
+			font-weight: 400
+			letter-spacing: 0.16px
+		.default__p
+			color: #ababab
+			font-size: 16px	
+			margin-top: 0px
+			line-height: 1.35		
+		&:last-child , &:nth-child(2)
+			margin-right: 0	
+/*container__slider*/
+.my-class
+	max-width: 100%
+.slick-track
+	display: flex !important
+	justify-content: center !important	
+	position: relative
+.content
+	margin-top: 90px
+	display: flex !important
+	justify-content: space-between !important
+	margin: 20px auto
+	flex-direction: row !important
+	width: 930px !important
+	.content__left
+		width: 40%
+		margin-right: 30px
+	.content__right
+		width: 40% 
+		.default__p
+			text-transform: uppercase
+			color: #c19a64
+			font-size: 18px
+			margin-top: 65px
+			margin-bottom: 5px
+		.h1
+			font-size: 40px	
+			margin-bottom: 13px	
+		.def__span
+			color: #ababab
+			font-size: 18px
+			text-transform: capitalize
+		.def__p
+			color: #212121
+			font-size: 16px
+			text-transform: capitalize
+			margin-top: 18px
+.slider-prev , .slider-next
+	position: absolute
+	display: flex
+	justify-content: center
+	align-items: center
+	color: #c19a64
+	border: 1px solid #c19a64
+
+	font-size: 18px
+	text-align: center
+	vertical-align: middle
+	width: 30px
+	height: 30px
+	background: transparent
+	&:hover
+		transition: .2s
+		background: #c19a64		
+		color: white
+.slider-prev
+	top: 400px
+	right: 510px
+	z-index: 3
+.slider-next
+	top: 400px
+	right: 480px
+.digits
+	position: absolute
+	right: 0
+	font-family: playfair-d, sans-serif
+	font-size: 60px
+	color: #c19a64
+	span
+		position: absolute
+		&:first-child
+			position: absolute !important
+			top: 5px !important
+			right: 30px
+		&:nth-child(2)
+			top: 27px
+			right: 10px	
+			transform: rotate(15deg)
+		&:last-child
+			top: 33px
+			right: -10px
+.absolute-img
+	position: absolute
+	left: -190px !important
+	top: 330px		
+	z-index: 100
+/*row.row__team*/
+.container__team
+	
+.row__team
+	margin: 0 auto
+	width: 900px
+.team__item
+	p
+		color: #212121
+		font-family: "playfair-d", sans-serif
+		font-size: 18px
+		font-weight: 400
+/*container__articles*/
+.container__articles
+	max-width: 100%
+	background: url(../img/articles-bgrd.png)
+	.default__p
+		padding-top: 79px
+		padding-bottom: 46px
+		text-align: center
+		color: white
+		font-size: 18px
+		text-transform: uppercase
+	.row__articles
+		width: 930px
+		margin: 0 auto
+		
+		
+		.col
+			margin-right: 42px
+			padding: 30px
+			padding-top: 35px
+			border: 1px solid white
+			height: 250px
+			position: relative
+			margin-bottom: 77px
+			&:hover
+				background: white
+				.h1
+					color: black
+				p
+					transition: all .3s
+					opacity: 1
+					color: #828282
+					font-size: 14px
+					font-family: 'proxima nova', sans-serif
+				&:before
+					display: block	
+				i
+					transition: all .3s
+					display: block	
+					color: #c19a64
+			&:last-child
+				margin-right: 0
+			.h1
+				font-size: 16px
+				letter-spacing: 0.4px
+				color: white
+			p
+				opacity: 0
+				height: 100px
+				margin-bottom: 0
+			&:before
+				content: ''
+				position: absolute
+				border: 1px solid #c19a64
+				width: 97%
+				height: 96.4%
+				top: .2em
+				left: .2em
+				display: none
+			i
+				display: block
+				text-align: right
+				color: white
+				font-size: 20px
+				position: absolute
+				right: 19px
+				bottom: 19px
+/*container__reviews*/
+.container__reviews
+	padding-top: 111px
+	padding-bottom: 100px 
+	.row__reviews
+		display: flex
+		margin: 0 auto
+		width: 977px
+		.col
+			position: relative
+			img
+				position: absolute
+				top: -100px
+				right: 0
+		.default__p
+			color: #c19a64
+			font-family: "proxima-nova", sans-serif
+			font-size: 18px
+			font-weight: 400
+			text-transform: uppercase
+			margin-left: 17px
+			letter-spacing: 0.18px	
+				
+
+.my-class2
+	width: 50%
+.rev__prev
+	top: 226px
+	right: 60px
+.rev__next
+	top: 226px
+	right: 30px		
+.content__rev
+	padding: 3px	
+	p
+		&:first-child
+			color: #ababab
+			font-family: 'proxima-nova', sans-serif
+			font-size: 16px
+			font-weight: 400
+			letter-spacing: 0.16px	
+			font-style: italic	
+			margin-top: 15px
+			margin-bottom: 13px
+			line-height: 1.3
+		&:last-child
+			color: #232323
+			font-family: 'proxima-nova', sans-serif
+			font-size: 16px
+			font-weight: 400
+			line-height: 20px
+
+			letter-spacing: 0.16px
+.container__footer
+	background: #212121
+	max-width: 100%
+	position: relative
+	height: 654px
+	.row-no-padding
+		max-width: 1300px
+		margin: 0 auto
+		height: auto
+		margin-top: 89px
+		border-top: 1px solid rgba(255, 255, 255, 0.1)
+		.nav
+			right: 0
+			left: 50px
+			
+			.nav__ul
+				height: 100%
+				padding-top: 22px
+				.nav__li
+					padding-bottom: 0 !important
+					height: 100%
+					padding-top: 0px
+
+					.nav__a
+						top: 0px
+						&:hover
+							border-top: none
+						&:before
+							display: none
+							top: 0px
+		img
+			padding-top: 22px
+		p
+			position: relative
+			display: table
+			color: #555555
+			font-family: 'proxima-nova', sans-serif
+			font-size: 16px
+			letter-spacing: 0.16px
+			margin-bottom: 0
+			top: 31px
+			right: -350px
+			height: 100%
+			font-style: italic
+		.row__icons
+			position: relative
+			right: -390px
+			top: 31px
+			height: 100%
+			i
+				margin-right: 26px	
+				color: #444444
+	.footer__top
+		width: 935px
+		margin: 0 auto
+		padding-top: 83px
+		.col-5
+			padding-left: 87px
+			a , span
+				color: #ffffff
+				font-family: "playfair-d" , sans-serif
+				font-size: 16px
+				font-weight: 400
+				line-height: 24px
+				letter-spacing: 0.4px
+				text-decoration: none !important
+			.tel__footer
+				font-style: italic
+				font-family: 'proxima-nova' , sans-serif
+				color: #ababab
+				font-size: 16px
+				font-weight: 400
+				letter-spacing: 0.16px
+				margin-bottom: 3px
+			.tel__main , .mail__footer , .address__footer , .hours__footer
+				margin-top: 20px
+				margin-bottom: 0	
+		.col-auto
+			.form
+				display: flex
+				flex-direction: column !important
+				width: 448px
+				height: 382px
+				border: 1px solid #c19a64
+				padding: 63px 106px 64px 82px
+				.h1
+					color: #fefefe
+					font-size: 30px
+				input
+					box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.28)
+					background-color: #111111
+					height: 43px
+					margin-bottom: 17px
+					padding-left: 18px
+					font-family: 'proxima-nova', sans-serif
+					color: white
+					font-size: 16px
+					&:last-child
+						margin-bottom: 29px !important
+	.default__p
+		position: absolute
+		transform: rotate(270deg)
+		top: 140px
+		left: 130px
+		text-transform: uppercase
+		font-size: 16px
+		color: #c19a64
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: -224px
+			top: 11px
+			height: 1px
+			width: 193px
+			background: #c19a64	
+
+.ymaps-geolink
+	margin-left: 0 !important
+	&:after , &:before
+		display: none !important
+		
+@import "media" // Always at the end
